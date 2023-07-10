@@ -1,0 +1,21 @@
+.space-right {
+    margin-right: 100px; /* Espacio hacia la derecha del nav */
+  }
+
+  .space-right2 {
+    margin-right: 20px; /* Espacio hacia la derecha del nav */
+  }
+
+  .space-right3 {
+    margin-left: 200px; /* Espacio hacia la Izquierda del nav */
+  }
+
+
+  .center-div2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    /*flex-direction: column;*/
+    margin: 0 auto;
+  }

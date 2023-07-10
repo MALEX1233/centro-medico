@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examenes</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilo/estilo.css">
+    <script src="script/custom.js"></script>
+
+    <!-- Estilos CSS personalizados -->
+    <style>
+        .center-div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 20vh;
+          max-width: 1000px;
+          flex-direction: column;
+          margin: 0 auto;
+        }
+    </style>
+</head>
+<body> 
+    
+    <!-- Barra de navegación -->
+    <nav class="navbar" style="background-color: #e3f2fd;">
+    <!-- Navbar content -->
+  </nav>
+
+  <!-- Barra de navegación con menú desplegable -->
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href=""><img src="Logo/Logokill.png" alt="100" height="80"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active space-right" aria-current="page" href="Index.html"><u>INICIO</u><span class="ms-8"></span></a>
+          </li>
+          <!-- Elemento de menú desplegable "Nuestra Red" -->
+          <li class="nav-item dropdown" onmouseover="openDropdown(this)" onmouseout="closeDropdown(this)">
+            <a class="nav-link dropdown-toggle space-right2 dropdown-hover" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Nuestra Red
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Centros Medicos</a></li>
+              <li><a class="dropdown-item" href="#">Laboratorios</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Clínicas Dentales</a></li>
+            </ul>
+          </li>
+          <!-- Elemento de menú desplegable "Servicios" -->
+          <li class="nav-item dropdown" onmouseover="openDropdown(this)" onmouseout="closeDropdown(this)">
+            <a class="nav-link dropdown-toggle space-right2 dropdown-hover" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Servicios
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Vacunatorios</a></li>
+              <li><a class="dropdown-item" href="#">Cirugias</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Atención Dental</a></li>
+            </ul>
+          </li>
+          <!-- Elemento de menú desplegable "Médicos y Especialidades" -->
+          <li class="nav-item dropdown" onmouseover="openDropdown(this)" onmouseout="closeDropdown(this)">
+            <a class="nav-link dropdown-toggle space-right2 dropdown-hover" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Médicos y Especialidades
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Disfunción dental</a></li>
+              <li><a class="dropdown-item" href="#">Dermatología</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Diabetología</a></li>
+            </ul>
+          </li>
+
+          <!-- Elemento de menú desplegable "Información al Paciente" -->
+          <li class="nav-item dropdown" onmouseover="openDropdown(this)" onmouseout="closeDropdown(this)">
+            <a class="nav-link dropdown-toggle space-right2 dropdown-hover" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Información al Paciente
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Bono pad fonasa</a></li>
+              <li><a class="dropdown-item" href="#">Horarios de atencion</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Examenes</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">¿Quienes Somos?</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active space-right3" aria-current="page" href="#"><img src="Icono/person-circle.svg" alt="50" width="40" style="margin-right:10px">Iniciar Sesión</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <!-- Contenedor principal -->
+    <div class="center-div" >
+        <h3>Cartola Examenes</h3><br>
+        <div class="input-group mb-3">
+            <!-- Input para buscar examen -->
+            <input type="text" class="form-control" placeholder="Buscar examen" aria-label="Buscar examen" aria-describedby="button-addon2" id="search-input">
+        </div>
+    </div>
+    <div class="center-div">
+        <!-- Tabla de exámenes -->
+        <table class="table hover" id="exam-table">
+            <thead class="table" style="background-color: rgb(104, 142, 247);">
+              <tr>
+                <th scope="col">Examen</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Ver</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>EX1234567</td>
+                <td>01-06-2023</td>
+                <td>Pendiente</td>
+                <td><a href="">--------------</a></td>
+              </tr>
+              <tr>
+                <td>EX7842145</td>
+                <td>15-03-2023</td>
+                <td>Listo</td>
+                <td><a href="Examenes/Examen2.jpg" target="_blank">Link Documento</a></td>
+              </tr>
+              <tr>
+                <td>EX5775658</td>
+                <td>22-10-2022</td>
+                <td>Listo</td>
+                <td><a href="Examenes/Examen3.jpg" target="_blank">Link Documento</a></td>
+              </tr>
+              <tr>
+                <td>EX5465266</td>
+                <td>01-02-2022</td>
+                <td>Listo</td>
+                <td><a href="Examenes/Examen4.jpg" target="_blank">Link Documento</a></td>
+              </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="center-div">
+    <footer>
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        <li class="page-item disabled">
+          <a class="page-link">Anterior</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Siguiente</a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
+</div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="script/filter-table.js"></script>
+</body>
+</html>
+
+
+
