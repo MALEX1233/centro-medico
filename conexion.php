@@ -4,7 +4,7 @@
     $username = 'root';
     $password = '';
     $bdname = 'Killercoronavirus';
-
+    
     $rut = $_POST['rut'];
     $contraseña= $_POST['password'];
 
@@ -20,11 +20,11 @@
     $result = $conn->query($sql);
     
     //vemos que tipo de usuario es
-    if($result->num_rows > 1){
+    if($result->num_rows > 0){
         $row = $result->fetch_assoc();
         $tipoUsuario = $row['tipo_usuario'];
-
-        echo json_encode(array("status"=>"success","tipo_usuario"=>$tipoUsuario));
+        $id = $row['ID'];
+        echo json_encode(array("status"=>"success","tipo_usuario"=>$tipoUsuario,"id"=>$id));
     }else{
         echo json_encode(array("status"=>"error"));
     }

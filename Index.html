@@ -6,6 +6,7 @@
     <title>Inicio</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="estilo/estilo.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="script/custom.js"></script>
 
     <style>
@@ -20,8 +21,7 @@
       }
   </style>
 </head>
-<body> 
-    
+<body>
     <nav class="navbar" style="background-color: #e3f2fd;">
     <!-- Navbar content -->
   </nav>
@@ -86,7 +86,9 @@
             <a class="nav-link active" aria-current="page" href="#">¿Quienes Somos?</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active space-right3" aria-current="page" href="#"><img src="Icono/person-circle.svg" alt="50" width="40" style="margin-right:10px " href="login.html">Iniciar Sesión</a>
+            <div class="clasnon" id="clasnon">
+              <a class="nav-link active space-right3" aria-current="page" href="login.html"><img src="Icono/person-circle.svg" alt="50" width="40" style="margin-right:10px " href="login.html">Iniciar Sesión</a>
+            </div>
           </li>
         </ul>
       </div>
@@ -125,8 +127,6 @@
           </button>
         </div>
       </div>
-       
-
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="script/filter-table.js"></script>
 </body>

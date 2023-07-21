@@ -4,23 +4,50 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-        <script src="/script/login.js"></script>
+        <script src="script/login.js"></script>
+        <link rel="stylesheet" href="estilo/estilo.css">
         <title>Document</title>
     </head>
     <body>
-        <form id="login" method="post">
-            <div>
-                <label for="name">rut :</label>
-                <input type="text" name="rut" id="rut" required>
+        <header class="encabezado">
+            <p>
+                Contacto:<a href="tel:+56912345678"> 9 1234 5678</a>
+            </p>
+            <p>
+                Email:<a href="mailto:Killcoronavirus@contacto.cl"> Killconoranavirus@contacto.cl</a>
+            </p>
+        </header>
+
+        <div class="contenedor_logo">
+            <img class="logo" src="Logo/Logokill.png">
+        </div>
+
+        <div id="central">
+            <div id="login">
+                <div class="titulo">
+                    Bienvenido
+                </div>
+                <form id="loginform" method="post" route="conexion.php">
+                    <input type="text" name="rut" id="rut" required>
+
+                    <input type="text" name="password" id="password" required>
+
+                    <button type="submit" title="Ingresar" name="Ingresar">Login</button>
+                </form>
+                <div class="pie-form">
+                    <a href="#">¿Perdiste tu contraseña?</a>
+                    <a onclick="registro()">¿No tienes Cuenta? Registrate</a>
+                </div>
             </div>
-            <div>
-                <label for="password">Contraseña :</label>
-                <input type="password" name="password" id="password" required>
-            </div>
-            <div>
-                <input type="submit" value="Iniciar sesion">
-            </div>
-        </form>
-        <div id="respuesta"></div>
+        </div>
+
+        <div class="inferior" id="volver">
+            <a href="Index.html">Volver</a>
+        </div>
+
+        <footer class="container_footer">
+            <p>© Todos los derechos reservados | Killcoronavirus.</p>
+            <a href='#'>2023</a>
+        </footer>
     </body>
 </html>
